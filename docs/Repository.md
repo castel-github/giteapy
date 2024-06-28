@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**allow_fast_forward_only_merge** | **bool** |  | [optional] 
 **allow_merge_commits** | **bool** |  | [optional] 
 **allow_rebase** | **bool** |  | [optional] 
 **allow_rebase_explicit** | **bool** |  | [optional] 
@@ -43,6 +44,7 @@ Name | Type | Description | Notes
 **mirror_interval** | **str** |  | [optional] 
 **mirror_updated** | **datetime** |  | [optional] 
 **name** | **str** |  | [optional] 
+**object_format_name** | **str** | ObjectFormatName of the underlying git repository | [optional] 
 **open_issues_count** | **int** |  | [optional] 
 **open_pr_counter** | **int** |  | [optional] 
 **original_url** | **str** |  | [optional] 
@@ -50,6 +52,7 @@ Name | Type | Description | Notes
 **parent** | [**Repository**](Repository.md) |  | [optional] 
 **permissions** | [**Permission**](Permission.md) |  | [optional] 
 **private** | **bool** |  | [optional] 
+**projects_mode** | **str** |  | [optional] 
 **release_counter** | **int** |  | [optional] 
 **repo_transfer** | [**RepoTransfer**](RepoTransfer.md) |  | [optional] 
 **size** | **int** |  | [optional] 

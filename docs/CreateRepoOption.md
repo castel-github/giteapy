@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **issue_labels** | **str** | Label-Set to use | [optional] 
 **license** | **str** | License to use | [optional] 
 **name** | **str** | Name of the repository to create | 
+**object_format_name** | **str** | ObjectFormatName of the underlying git repository | [optional] 
 **private** | **bool** | Whether the repository is private | [optional] 
 **readme** | **str** | Readme of the repository to create | [optional] 
 **template** | **bool** | Whether the repository is template | [optional] 

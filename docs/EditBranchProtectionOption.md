@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **enable_push** | **bool** |  | [optional] 
 **enable_push_whitelist** | **bool** |  | [optional] 
 **enable_status_check** | **bool** |  | [optional] 
+**ignore_stale_approvals** | **bool** |  | [optional] 
 **merge_whitelist_teams** | **list[str]** |  | [optional] 
 **merge_whitelist_usernames** | **list[str]** |  | [optional] 
 **protected_file_patterns** | **str** |  | [optional] 

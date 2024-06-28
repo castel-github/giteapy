@@ -1,6 +1,6 @@
 # giteapy.IssueApi
 
-All URIs are relative to *http://localhost/api/v1*
+All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -4464,7 +4464,7 @@ type = 'type_example' # str | filter by type (issues / pulls) if set (optional)
 milestones = 'milestones_example' # str | comma separated list of milestone names or ids. It uses names and fall back to ids. Fetch only issues that have any of this milestones. Non existent milestones are discarded (optional)
 since = '2013-10-20T19:20:30+01:00' # datetime | Only show items updated after the given time. This is a timestamp in RFC 3339 format (optional)
 before = '2013-10-20T19:20:30+01:00' # datetime | Only show items updated before the given time. This is a timestamp in RFC 3339 format (optional)
-created_by = 'created_by_example' # str | Only show items which were created by the the given user (optional)
+created_by = 'created_by_example' # str | Only show items which were created by the given user (optional)
 assigned_by = 'assigned_by_example' # str | Only show items for which the given user is assigned (optional)
 mentioned_by = 'mentioned_by_example' # str | Only show items in which the given user was mentioned (optional)
 page = 56 # int | page number of results to return (1-based) (optional)
@@ -4491,7 +4491,7 @@ Name | Type | Description  | Notes
  **milestones** | **str**| comma separated list of milestone names or ids. It uses names and fall back to ids. Fetch only issues that have any of this milestones. Non existent milestones are discarded | [optional] 
  **since** | **datetime**| Only show items updated after the given time. This is a timestamp in RFC 3339 format | [optional] 
  **before** | **datetime**| Only show items updated before the given time. This is a timestamp in RFC 3339 format | [optional] 
- **created_by** | **str**| Only show items which were created by the the given user | [optional] 
+ **created_by** | **str**| Only show items which were created by the given user | [optional] 
  **assigned_by** | **str**| Only show items for which the given user is assigned | [optional] 
  **mentioned_by** | **str**| Only show items in which the given user was mentioned | [optional] 
  **page** | **int**| page number of results to return (1-based) | [optional] 
