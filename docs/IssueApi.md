@@ -5254,23 +5254,23 @@ configuration.api_key['token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = giteapy.IssueApi(giteapy.ApiClient(configuration))
-state = 'state_example' # str | whether issue is open or closed (optional)
-labels = 'labels_example' # str | comma separated list of labels. Fetch only issues that have any of this labels. Non existent labels are discarded (optional)
-milestones = 'milestones_example' # str | comma separated list of milestone names. Fetch only issues that have any of this milestones. Non existent are discarded (optional)
-q = 'q_example' # str | search string (optional)
-priority_repo_id = 789 # int | repository to prioritize in the results (optional)
-type = 'type_example' # str | filter by type (issues / pulls) if set (optional)
-since = '2013-10-20T19:20:30+01:00' # datetime | Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
-before = '2013-10-20T19:20:30+01:00' # datetime | Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
-assigned = true # bool | filter (issues / pulls) assigned to you, default is false (optional)
-created = true # bool | filter (issues / pulls) created by you, default is false (optional)
-mentioned = true # bool | filter (issues / pulls) mentioning you, default is false (optional)
-review_requested = true # bool | filter pulls requesting your review, default is false (optional)
-reviewed = true # bool | filter pulls reviewed by you, default is false (optional)
-owner = 'owner_example' # str | filter by owner (optional)
-team = 'team_example' # str | filter by team (requires organization owner parameter to be provided) (optional)
-page = 56 # int | page number of results to return (1-based) (optional)
-limit = 56 # int | page size of results (optional)
+state = 'open' # str | State of the issue (optional) (default to open)
+labels = 'labels_example' # str | Comma-separated list of label names. Fetch only issues that have any of these labels. Non existent labels are discarded. (optional)
+milestones = 'milestones_example' # str | Comma-separated list of milestone names. Fetch only issues that have any of these milestones. Non existent milestones are discarded. (optional)
+q = 'q_example' # str | Search string (optional)
+priority_repo_id = 789 # int | Repository ID to prioritize in the results (optional)
+type = 'type_example' # str | Filter by issue type (optional)
+since = '2013-10-20T19:20:30+01:00' # datetime | Only show issues updated after the given time (RFC 3339 format) (optional)
+before = '2013-10-20T19:20:30+01:00' # datetime | Only show issues updated before the given time (RFC 3339 format) (optional)
+assigned = false # bool | Filter issues or pulls assigned to the authenticated user (optional) (default to false)
+created = false # bool | Filter issues or pulls created by the authenticated user (optional) (default to false)
+mentioned = false # bool | Filter issues or pulls mentioning the authenticated user (optional) (default to false)
+review_requested = false # bool | Filter pull requests where the authenticated user's review was requested (optional) (default to false)
+reviewed = false # bool | Filter pull requests reviewed by the authenticated user (optional) (default to false)
+owner = 'owner_example' # str | Filter by repository owner (optional)
+team = 'team_example' # str | Filter by team (requires organization owner parameter) (optional)
+page = 1 # int | Page number of results to return (1-based) (optional) (default to 1)
+limit = 56 # int | Number of items per page (optional)
 
 try:
     # Search for issues across the repositories that the user has access to
@@ -5284,23 +5284,23 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **state** | **str**| whether issue is open or closed | [optional] 
- **labels** | **str**| comma separated list of labels. Fetch only issues that have any of this labels. Non existent labels are discarded | [optional] 
- **milestones** | **str**| comma separated list of milestone names. Fetch only issues that have any of this milestones. Non existent are discarded | [optional] 
- **q** | **str**| search string | [optional] 
- **priority_repo_id** | **int**| repository to prioritize in the results | [optional] 
- **type** | **str**| filter by type (issues / pulls) if set | [optional] 
- **since** | **datetime**| Only show notifications updated after the given time. This is a timestamp in RFC 3339 format | [optional] 
- **before** | **datetime**| Only show notifications updated before the given time. This is a timestamp in RFC 3339 format | [optional] 
- **assigned** | **bool**| filter (issues / pulls) assigned to you, default is false | [optional] 
- **created** | **bool**| filter (issues / pulls) created by you, default is false | [optional] 
- **mentioned** | **bool**| filter (issues / pulls) mentioning you, default is false | [optional] 
- **review_requested** | **bool**| filter pulls requesting your review, default is false | [optional] 
- **reviewed** | **bool**| filter pulls reviewed by you, default is false | [optional] 
- **owner** | **str**| filter by owner | [optional] 
- **team** | **str**| filter by team (requires organization owner parameter to be provided) | [optional] 
- **page** | **int**| page number of results to return (1-based) | [optional] 
- **limit** | **int**| page size of results | [optional] 
+ **state** | **str**| State of the issue | [optional] [default to open]
+ **labels** | **str**| Comma-separated list of label names. Fetch only issues that have any of these labels. Non existent labels are discarded. | [optional] 
+ **milestones** | **str**| Comma-separated list of milestone names. Fetch only issues that have any of these milestones. Non existent milestones are discarded. | [optional] 
+ **q** | **str**| Search string | [optional] 
+ **priority_repo_id** | **int**| Repository ID to prioritize in the results | [optional] 
+ **type** | **str**| Filter by issue type | [optional] 
+ **since** | **datetime**| Only show issues updated after the given time (RFC 3339 format) | [optional] 
+ **before** | **datetime**| Only show issues updated before the given time (RFC 3339 format) | [optional] 
+ **assigned** | **bool**| Filter issues or pulls assigned to the authenticated user | [optional] [default to false]
+ **created** | **bool**| Filter issues or pulls created by the authenticated user | [optional] [default to false]
+ **mentioned** | **bool**| Filter issues or pulls mentioning the authenticated user | [optional] [default to false]
+ **review_requested** | **bool**| Filter pull requests where the authenticated user&#39;s review was requested | [optional] [default to false]
+ **reviewed** | **bool**| Filter pull requests reviewed by the authenticated user | [optional] [default to false]
+ **owner** | **str**| Filter by repository owner | [optional] 
+ **team** | **str**| Filter by team (requires organization owner parameter) | [optional] 
+ **page** | **int**| Page number of results to return (1-based) | [optional] [default to 1]
+ **limit** | **int**| Number of items per page | [optional] 
 
 ### Return type
 
